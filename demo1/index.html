@@ -1,21 +1,95 @@
 <!DOCTYPE html>
 <head>
-<title>Mr.Li - 即将上线·创意模板</title>
+    <title>Mr.div - 即将上线·创意模板</title>
 
-<meta http-equiv="content-type" content="text/html;charset=UTF-8">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="">
-<meta name="keywords" content="">
-<meta name="author" content="">
-
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <style>
+     header{
+      background-color: #0d1029;
+      top: 0;
+      left: 0;
+      right: 0;
+      color: white;
+      position: fixed; top: 0;opacity:0.75;
+      z-index: 100;
+     }
+     header div{
+      float: right;
+      height: 40px;
+      font-size: 20px;
+      margin-right: 20px;
+     }
+     main{
+      margin-top: 40px;
+      text-align: center;
+      width: 700px;
+      padding: 30px 162px;
+      background-color: white;
+      margin: auto;
+     }
+     h6{font-size: 40px;text-align: left}
+     h1{font-size: 20px;text-align: left}
+     h1,h2,h3,h4{
+      text-align: left;
+     }
+     img{
+      width: 700px;
+     }
+     button{width: 130px;
+      height: 40px;
+      border-radius: 10px;
+      border: 1px solid slategray;
+      background-color: white;
+     }
+    </style>
+ <script src="lib/js/jquery-3.3.1.min.js"></script>
 </head>
-<body>
-<header>
- <button></button>
-</header>
-<footer>
-</footer>
+<body style="background-color: antiquewhite">
+    <header>
+     <div><a>注册</a></div>
+      <div><a>登录</a></div>
+     <div><a>首页</a></div>
+    </header>
+    <main>
+     <div id="title">
+      <h6>艾滋病“爆发”之前，身体出现3个“求救信号”，抓住一个能保命</h6>
+      <h1>一只乌鸦口渴       2018-11-11 15:29</h1>
+      <img id="img1" src="lib/img/1.jpg">
+      <h3>艾滋病是一种高度传染性的疾病。如果一个人在日常生活中不特别注意自己的生活习惯，他可能会患上艾滋病。艾滋病对人们来说是一种非常可怕的疾病，因为一旦一个人患有艾滋病，基本上就没有完全治愈的可能。</h3>
+      <div id="div2" style="height: 600px">
+       <img id="img2" style="display: none"  src="lib/img/2.jpg">
+      </div>
+      <h3>1、淋巴肿大，然而，我们都知道我们的身体充满了淋巴结。如果人们的健康有问题，我们身体的淋巴结可能会肿胀，尤其是在人们感染艾滋病后，这很容易导致全身感染。这时，淋巴结的肿胀会特别明显，严重的淋巴结可能会导致淋巴瘤。</h3>
+      <div id="div3" style="height: 600px">
+      <img id="img3" style="display: none"  src="lib/img/3.jpg">
+      </div>
+      <h3>2、皮肤损伤不易好，当人们患有艾滋病时，HIV可能会对人们的皮肤和粘膜造成一定的伤害。随着时间的推移，它可能会导致湿疹、瘙痒、尖锐湿疣和其他明显的症状。即使这些条件得到及时控制，治疗效果也不是特别明显。</h3>
+       <div id="div4" style="height: 600px">
+       <img id="img4" style="display: none" src="lib/img/4.jpg">
+       </div>
+      <h3>3、食欲不振，一旦一个人患有艾滋病，HIV病毒将在人体内大量繁殖，从而对人体免疫系统造成一定的损害，这可能会导致人体免疫功能长期下降，免疫功能下降也会伴随着食欲下降、恶心和呕吐。</h3>
+     </div>
+     <div>
+      <button>点个赞吧</button>
+     </div>
+    </main>
+    <footer>
+    </footer>
 </div>
 </body>
+<script>
+    $(window).scroll(function () {
+        for(var i=2;i<5;i++){
+            var a = $("#div"+i).offset().top;
+            if (a >= $(window).scrollTop() && a < ($(window).scrollTop() + $(window).height())) {
+                $("#img"+i).fadeIn(2000);
+            }
+        }
+    });
+</script>
 </html>
