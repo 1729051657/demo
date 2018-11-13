@@ -67,13 +67,22 @@
             height: 100%;
             padding: 10%;
         }
+        #table1{
+            width: 100%;
+            height: 100%;
+            padding: 5%;
+        }
+        #table1 td{
+            font-size: 2em;
+        }
         td{
             font-size: 1.4em;
             width: 50%;
             text-align: center;
         }
         #title{
-            font-size: 2.3em;
+            font-size: 3em;
+            color: red;
             float: none;
             padding:10%;
             width: 80%;
@@ -111,15 +120,15 @@
                     <table>
                         <tr>
                             <td>昨日成交笔数</td>
-                            <td id="zfb1"></td>
+                            <td id="zfb1"  style="color: red"></td>
                         </tr>
                         <tr>
                             <td>昨日成交额</td>
-                            <td id="zfb2"></td>
+                            <td id="zfb2" style="color: red"></td>
                         </tr>
                         <tr>
                             <td>平均每笔消费金额</td>
-                            <td id="zfb3"></td>
+                            <td id="zfb3" style="color: red"></td>
                         </tr>
                     </table>
                 </div>
@@ -132,15 +141,15 @@
                     <table>
                         <tr>
                             <td>昨日成交笔数</td>
-                            <td id="qt1"></td>
+                            <td id="qt1" style="color: red"></td>
                         </tr>
                         <tr>
                             <td>昨日成交额</td>
-                            <td id="qt2"></td>
+                            <td id="qt2" style="color: red"></td>
                         </tr>
                         <tr>
                             <td>平均每笔消费金额</td>
-                            <td id="qt3"></td>
+                            <td id="qt3" style="color: red"></td>
                         </tr>
                     </table>
                 </div>
@@ -161,22 +170,22 @@
             </div>
             <div id="map"></div>
             <div id="boottom">
-                <table>
+                <table id="table1">
                     <tr>
                         <td>今日成交笔数</td>
                         <td>今日成交额</td>
                     </tr>
                     <tr>
-                        <td id="cj1"></td>
-                        <td id="cj2"></td>
+                        <td id="cj1" style="color: red"></td>
+                        <td id="cj2" style="color: red"></td>
                     </tr>
                     <tr>
                         <td>今日支付宝交易笔数</td>
                         <td>今日支微信交易笔数</td>
                     </tr>
                     <tr>
-                        <td id="zf1"></td>
-                        <td id="zf2"></td>
+                        <td id="zf1" style="color: red"></td>
+                        <td id="zf2" style="color: red"></td>
                     </tr>
                 </table>
             </div>
@@ -526,13 +535,13 @@
                             formatter: function(data) {
                                 //富文本固定格式{colorName|这里填你想要写的内容}
                                 if (paiming[data.dataIndex] == 1) {
-                                    return '{start1|}{red|' + paiming[data.dataIndex] + '  ' + xingm[data.dataIndex] + '}' + '                                                           ' + '{white|    总销售额:}{gray|' + zongjine[data.dataIndex] + '}{white|元}';
+                                    return '{start1|}{red|' + paiming[data.dataIndex] + '  ' + xingm[data.dataIndex] + '}' + '                                                           ' + '{white|    总销售额:}{red|' + zongjine[data.dataIndex] + '}{white|元}';
                                 } else if (paiming[data.dataIndex] == 2) {
-                                    return '{start1|}{yellow|' + paiming[data.dataIndex] + '  ' + xingm[data.dataIndex] + '}' + '                                                           ' + '{white|    总销售额:}{gray|' + zongjine[data.dataIndex] + '}{white|元}';
+                                    return '{start1|}{yellow|' + paiming[data.dataIndex] + '  ' + xingm[data.dataIndex] + '}' + '                                                           ' + '{white|    总销售额:}{red|' + zongjine[data.dataIndex] + '}{white|元}';
                                 } else if (paiming[data.dataIndex] == 3) {
-                                    return '{start1|}{green|' + paiming[data.dataIndex] + '  ' + xingm[data.dataIndex] + '}' + '                                                           ' + '{white|    总销售额:}{gray|' + zongjine[data.dataIndex] + '}{white|元}';
+                                    return '{start1|}{green|' + paiming[data.dataIndex] + '  ' + xingm[data.dataIndex] + '}' + '                                                           ' + '{white|    总销售额:}{red|' + zongjine[data.dataIndex] + '}{white|元}';
                                 } else {
-                                    return '{start2|}{white|' + paiming[data.dataIndex] + '  ' + xingm[data.dataIndex] + '}' + '                                                           ' + '{white|    总销售额:}{gray|' + zongjine[data.dataIndex] + '}{white|元}';
+                                    return '{start2|}{white|' + paiming[data.dataIndex] + '  ' + xingm[data.dataIndex] + '}' + '                                                           ' + '{white|    总销售额:}{red|' + zongjine[data.dataIndex] + '}{white|元}';
                                 }
 
                             },
@@ -689,13 +698,13 @@
                             formatter: function(data) {
                                 //富文本固定格式{colorName|这里填你想要写的内容}
                                 if (paiming2[data.dataIndex] == 1) {
-                                    return '{start1|}{red|' + paiming2[data.dataIndex] + '  ' + xingm2[data.dataIndex] + '}' + '                                                           ' + '{white|    总销售额:}{gray|' + zongjine2[data.dataIndex] + '}{white|元}';
+                                    return '{start1|}{red|' + paiming2[data.dataIndex] + '  ' + xingm2[data.dataIndex] + '}' + '                                                           ' + '{white|    总销售额:}{red|' + zongjine2[data.dataIndex] + '}{white|元}';
                                 } else if (paiming2[data.dataIndex] == 2) {
-                                    return '{start1|}{yellow|' + paiming2[data.dataIndex] + '  ' + xingm2[data.dataIndex] + '}' + '                                                           ' + '{white|    总销售额:}{gray|' + zongjine2[data.dataIndex] + '}{white|元}';
+                                    return '{start1|}{yellow|' + paiming2[data.dataIndex] + '  ' + xingm2[data.dataIndex] + '}' + '                                                           ' + '{white|    总销售额:}{red|' + zongjine2[data.dataIndex] + '}{white|元}';
                                 } else if (paiming2[data.dataIndex] == 3) {
-                                    return '{start1|}{green|' + paiming2[data.dataIndex] + '  ' + xingm2[data.dataIndex] + '}' + '                                                           ' + '{white|    总销售额:}{gray|' + zongjine2[data.dataIndex] + '}{white|元}';
+                                    return '{start1|}{green|' + paiming2[data.dataIndex] + '  ' + xingm2[data.dataIndex] + '}' + '                                                           ' + '{white|    总销售额:}{red|' + zongjine2[data.dataIndex] + '}{white|元}';
                                 } else {
-                                    return '{start2|}{white|' + paiming2[data.dataIndex] + '  ' + xingm2[data.dataIndex] + '}' + '                                                           ' + '{white|    总销售额:}{gray|' + zongjine2[data.dataIndex] + '}{white|元}';
+                                    return '{start2|}{white|' + paiming2[data.dataIndex] + '  ' + xingm2[data.dataIndex] + '}' + '                                                           ' + '{white|    总销售额:}{red|' + zongjine2[data.dataIndex] + '}{white|元}';
                                 }
 
                             },
